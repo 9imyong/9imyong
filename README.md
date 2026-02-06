@@ -1,5 +1,3 @@
-# 👋 안녕하세요, 9IMYONG입니다
-
 **AI Model Serving · Infra · SRE**
 
 > GPU 기반 AI 모델 서빙 시스템을  
