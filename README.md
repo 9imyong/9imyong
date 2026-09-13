@@ -1,5 +1,3 @@
-# 👋 안녕하세요, 9IMYONG입니다
-
 ### AI Serving · Backend · Infrastructure
 
 AI 모델을 **실제 서비스와 제품 환경에서 안정적으로 운영하는 방법**에 관심을 두고 개발하고 있습니다.
@@ -9,7 +7,7 @@ AI 모델을 **실제 서비스와 제품 환경에서 안정적으로 운영하
 
 ---
 
-## 🔧 What I Do
+## What I Do
 
 ### AI Model Serving
 
@@ -41,7 +39,7 @@ AI 모델을 **실제 서비스와 제품 환경에서 안정적으로 운영하
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 **Backend / Serving**
 Python · FastAPI · Django · Redis · Kafka · Celery
