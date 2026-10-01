@@ -1,61 +1,52 @@
-### AI Serving · Backend · Infrastructure
+# AI Serving · Backend · Infrastructure
 
-AI 모델을 **실제 서비스와 제품 환경에서 안정적으로 운영하는 방법**에 관심을 두고 개발하고 있습니다.
+AI 모델을 **실제 서비스 환경에서 안정적으로 배포하고 운영하는 시스템**을 개발합니다.
+**데이터 → 추론 → API → 배포 → 모니터링**으로 이어지는 흐름에서 성능과 운영 안정성을 함께 고민합니다.
 
-모델 자체의 성능뿐만 아니라
-**데이터 → 추론 → API → 배포 → 모니터링**으로 이어지는 전체 시스템을 함께 고민합니다.
+## Selected Projects
 
----
+### [CCTV Safety Vision](https://github.com/9imyong/cctv-safety-vision)
+
+건설 현장 CCTV에서 안전보호구 미착용과 위험 상황을 검출하는 AI 영상분석 시스템.
+TensorRT 기반 다채널 추론, GStreamer 기반 HLS 재송출, 이벤트 영상 녹화와 외부 관제 연동을 다룹니다.
+
+### [Model Serving Platform](https://github.com/9imyong/model-serving)
+
+OCR 모델 서빙을 위한 FastAPI 기반 플랫폼 스켈레톤.
+API·Worker·도메인 로직을 분리하고, 비동기 처리와 Kubernetes 배포 및 모니터링을 고려한 구조를 설계합니다.
+
+### [CCTV AI Streaming Platform](https://github.com/9imyong/streaming-pipeline)
+
+장시간 실행되는 CCTV 스트리밍을 API 요청과 분리한 이벤트 기반 플랫폼.
+Kafka 기반 명령 처리, Lease 기반 중복 실행 방지, 워커 장애 시 인계 구조를 다룹니다.
 
 ## What I Do
 
-### AI Model Serving
+### AI Serving & Pipeline
 
-* Python / FastAPI 기반 AI inference API
-* 비동기 처리 및 Worker 기반 추론 구조
-* GPU inference 병목 분석 및 자원 관리
-* ONNX / TensorRT 기반 모델 최적화
+- Python / FastAPI 기반 추론 API 및 비동기 Worker 구성
+- STT · Wake Word · Vision 파이프라인과 데이터셋·학습 흐름 구축
+- GPU 병목 분석, ONNX / TensorRT 최적화 및 추론 지연시간 개선
 
-### AI Pipeline
+### Infrastructure & Deployment
 
-* STT · Wake Word · Vision 모델 파이프라인
-* Detection · Tracking · Re-ID 구조 설계
-* 데이터셋 구축 및 모델 학습 파이프라인
-* 실시간 inference 성능 및 latency 최적화
+- Docker 기반 컨테이너화 및 Kubernetes 배포 환경 구성
+- NGINX 기반 서비스 라우팅
+- CI/CD와 배포·복구 자동화
 
-### Infrastructure / DevOps
+### Observability & Reliability
 
-* Docker 기반 서비스 컨테이너화
-* Kubernetes 기반 배포 및 운영 환경 구성
-* NGINX Reverse Proxy 및 서비스 라우팅
-* CI/CD 및 배포·복구 자동화
-
-### Observability / Reliability
-
-* Prometheus / Grafana 기반 Metrics
-* Health Check / Structured Logging
-* 장애 원인 분석 및 복구 절차 설계
-* 서비스 안정성과 운영 가능성을 고려한 아키텍처 설계
-
----
+- Prometheus / Grafana 기반 지표 수집과 모니터링
+- 헬스 체크 및 구조화된 로깅
+- 장애 원인 분석과 복구 절차 설계
 
 ## Tech Stack
 
-**Backend / Serving**
-Python · FastAPI · Django · Redis · Kafka · Celery
-
-**AI / Inference**
-PyTorch · ONNX · TensorRT · OpenVINO · CUDA
-
-**Infrastructure**
-Docker · Docker Compose · Kubernetes · NGINX · Linux
-
-**Observability**
-Prometheus · Grafana · Metrics · Structured Logging
-
----
+| 분야 | 기술 |
+| --- | --- |
+| Backend / Serving | Python · FastAPI · Django · Redis · Kafka · Celery |
+| AI / Inference | PyTorch · ONNX · TensorRT · OpenVINO · CUDA |
+| Infrastructure | Docker · Docker Compose · Kubernetes · NGINX · Linux |
+| Observability | Prometheus · Grafana |
 
 > **Building AI systems that work beyond the model.**
->
-> 모델을 만드는 것에서 끝나지 않고,
-> **실제로 배포하고 운영할 수 있는 AI 시스템**을 만드는 것을 지향합니다.
