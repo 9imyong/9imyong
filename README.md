@@ -10,15 +10,18 @@ AI 모델을 **실제 서비스 환경에서 안정적으로 배포하고 운영
 건설 현장 CCTV에서 안전보호구 미착용과 위험 상황을 검출하는 AI 영상분석 시스템.
 TensorRT 기반 다채널 추론, GStreamer 기반 HLS 재송출, 이벤트 영상 녹화와 외부 관제 연동을 다룹니다.
 
-### [Model Serving Platform](https://github.com/9imyong/model-serving)
+### [MorphFlow](https://github.com/9imyong/morphflow)
 
-OCR 모델 서빙을 위한 FastAPI 기반 플랫폼 스켈레톤.
-API·Worker·도메인 로직을 분리하고, 비동기 처리와 Kubernetes 배포 및 모니터링을 고려한 구조를 설계합니다.
+Kafka 기반 이벤트 구조의 AI 추론 파이프라인 스켈레톤.
+Retry/DLQ, 파티션 단위 백오프, 성공 접두부까지만 하는 오프셋 커밋, lease·펜싱 토큰 기반 작업 소유권을 다룹니다.
 
 ### [CCTV AI Streaming Platform](https://github.com/9imyong/streaming-pipeline)
 
 장시간 실행되는 CCTV 스트리밍을 API 요청과 분리한 이벤트 기반 플랫폼.
 Kafka 기반 명령 처리, Lease 기반 중복 실행 방지, 워커 장애 시 인계 구조를 다룹니다.
+
+CCTV Safety Vision은 채널 하나를 Celery 장기 실행 태스크 하나로 돌립니다.
+이 플랫폼은 상태를 가진 스트리밍에 Celery가 맞지 않다고 보고, 채널 소유권을 DB lease로 관리하는 구조로 다시 설계한 것입니다.
 
 ## What I Do
 
